@@ -13,7 +13,7 @@ const datas: Data[] = data;
 
 export default function Home() {
 	return (
-		<main className="flex flex-col w-1/4 space-y-4">
+		<main className="flex flex-col w-[28rem] md:w-[26rem] space-y-4 px-4 md:px-0">
 			<header className="bg-primary-softRed text-neutral-veryPaleOrange rounded-xl p-6 flex justify-between">
 				<div className="flex flex-col">
 					<span className="text-xs">My balance</span>
@@ -39,12 +39,12 @@ export default function Home() {
 				</svg>
 			</header>
 
-			<section className="bg-neutral-veryPaleOrange p-6 rounded-xl flex flex-col space-y-4">
+			<section className="bg-neutral-veryPaleOrange px-4 py-6 md:p-6 rounded-xl flex flex-col space-y-4">
 				<h3 className="font-extrabold text-2xl text-neutral-darkBrown mb-4">
 					Spending - Last 7 days
 				</h3>
 
-				<div className="flex justify-between">
+				<div className="flex">
 					{datas.map((data) => (
 						<div
 							key={data.amount}
@@ -58,10 +58,10 @@ export default function Home() {
 									data.day === currentDayOfTheWeek
 										? "bg-primary-cyan hover:bg-primary-cyan/70 peer"
 										: "bg-primary-softRed hover:bg-primary-softRed/70 peer"
-								}  rounded self-center w-12`}
+								}  rounded self-center w-10`}
 								style={{ height: 3 * data.amount }}
 							></div>
-							<div className="invisible p-2 rounded bg-neutral-darkBrown text-neutral-veryPaleOrange mb-2 peer-hover:visible">
+							<div className="invisible p-2 text-xs rounded bg-neutral-darkBrown text-neutral-veryPaleOrange mb-2 peer-hover:visible">
 								<span>${data.amount}</span>
 							</div>
 						</div>
