@@ -10,14 +10,14 @@ const config: Config = {
 		extend: {
 			colors: {
 				primary: {
-					"Soft red": "hsl(10, 79%, 65%)",
-					Cyan: "hsl(186, 34%, 60%)",
+					softRed: "hsl(10, 79%, 65%)",
+					cyan: "hsl(186, 34%, 60%)",
 				},
 				neutral: {
-					"Dark brown": "hsl(25, 47%, 15%)",
-					"Medium brown": "hsl(28, 10%, 53%)",
-					Cream: "hsl(27, 66%, 92%)",
-					"Very pale orange": "hsl(33, 100%, 98%)",
+					darkBrown: "hsl(25, 47%, 15%)",
+					mediumBrown: "hsl(28, 10%, 53%)",
+					cream: "hsl(27, 66%, 92%)",
+					veryPaleOrange: "hsl(33, 100%, 98%)",
 				},
 			},
 		},

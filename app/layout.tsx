@@ -15,7 +15,11 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={dmSans.className}>{children}</body>
+			<body
+				className={`${dmSans.className} min-h-screen bg-neutral-cream flex justify-center items-center`}
+			>
+				{children}
+			</body>
 		</html>
 	);
 }
