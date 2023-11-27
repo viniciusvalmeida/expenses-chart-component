@@ -3,8 +3,8 @@ export default function Home() {
 		<main className="flex flex-col w-4/12 space-y-4">
 			<header className="bg-primary-softRed text-white rounded-xl p-6 flex justify-between">
 				<div className="flex flex-col">
-					My balance
-					<span>$921.48</span>
+					<span className="text-xs">My balance</span>
+					<span className="font-bold text-xl">$921.48</span>
 				</div>
 				<svg
 					className="w-14"
@@ -38,7 +38,7 @@ export default function Home() {
 						<span className="text-neutral-mediumBrown text-xs">
 							Total this month
 						</span>
-						<span className="font-extrabold text-4xl text-neutral-darkBrown">
+						<span className="font-extrabold text-3xl text-neutral-darkBrown">
 							$478.33
 						</span>
 					</div>
