@@ -13,7 +13,7 @@ const datas: Data[] = data;
 
 export default function Home() {
 	return (
-		<main className="flex flex-col w-4/12 space-y-4">
+		<main className="flex flex-col w-1/4 space-y-4">
 			<header className="bg-primary-softRed text-neutral-veryPaleOrange rounded-xl p-6 flex justify-between">
 				<div className="flex flex-col">
 					<span className="text-xs">My balance</span>
@@ -75,7 +75,7 @@ export default function Home() {
 						<span className="text-neutral-mediumBrown text-xs">
 							Total this month
 						</span>
-						<span className="font-extrabold text-3xl text-neutral-darkBrown">
+						<span className="font-bold text-3xl text-neutral-darkBrown">
 							$478.33
 						</span>
 					</div>
