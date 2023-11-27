@@ -26,8 +26,23 @@ export default function Home() {
 				</svg>
 			</header>
 
-			<section className="bg-neutral-veryPaleOrange p-6 rounded-xl flex flex-col">
-				Graphs
+			<section className="bg-neutral-veryPaleOrange p-6 rounded-xl flex flex-col space-y-4">
+				<h3 className="font-extrabold text-xl">
+					Spending - Last 7 days
+				</h3>
+
+				<hr />
+
+				<div className="flex justify-between">
+					<div className="flex flex-col text-xs">
+						Total this month
+						<span className="font-extrabold text-4xl">$478.33</span>
+					</div>
+					<div className="flex flex-col">
+						<span className="font-extrabold text-xs">+2.4%</span>
+						from last month
+					</div>
+				</div>
 			</section>
 		</main>
 	);
