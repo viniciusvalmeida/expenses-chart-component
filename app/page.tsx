@@ -1,3 +1,5 @@
+"use client";
+
 import data from "../data/data.json";
 
 type Data = {
@@ -7,11 +9,12 @@ type Data = {
 const daysOfWeek = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
 const currentDayOfTheWeek = daysOfWeek[new Date().getDay()];
 
-export default async function Home() {
-	const datas: Data[] = data;
+const datas: Data[] = data;
+
+export default function Home() {
 	return (
 		<main className="flex flex-col w-4/12 space-y-4">
-			<header className="bg-primary-softRed text-white rounded-xl p-6 flex justify-between">
+			<header className="bg-primary-softRed text-neutral-veryPaleOrange rounded-xl p-6 flex justify-between">
 				<div className="flex flex-col">
 					<span className="text-xs">My balance</span>
 					<span className="font-bold text-xl">$921.48</span>
@@ -53,10 +56,14 @@ export default async function Home() {
 							<div
 								className={`${
 									data.day === currentDayOfTheWeek
-										? "bg-primary-cyan"
-										: "bg-primary-softRed"
-								}  rounded self-center w-8 min-h-[${data.amount.toFixed()}px]`}
+										? "bg-primary-cyan hover:bg-primary-cyan/70 peer"
+										: "bg-primary-softRed hover:bg-primary-softRed/70 peer"
+								}  rounded self-center w-12`}
+								style={{ height: 3 * data.amount }}
 							></div>
+							<div className="invisible p-2 rounded bg-neutral-darkBrown text-neutral-veryPaleOrange mb-2 peer-hover:visible">
+								<span>${data.amount}</span>
+							</div>
 						</div>
 					))}
 				</div>
