@@ -13,11 +13,11 @@ const datas: Data[] = data;
 
 export default function Home() {
 	return (
-		<main className="flex flex-col w-[28rem] md:w-[26rem] space-y-4 px-4 md:px-0">
+		<main className="flex flex-col w-[23rem] md:w-[26rem] space-y-4 px-4 md:px-0">
 			<header className="bg-primary-softRed text-neutral-veryPaleOrange rounded-xl p-6 flex justify-between">
 				<div className="flex flex-col">
 					<span className="text-xs">My balance</span>
-					<span className="font-bold text-xl">$921.48</span>
+					<span className="font-bold text-2xl">$921.48</span>
 				</div>
 				<svg
 					className="w-14"
@@ -58,10 +58,10 @@ export default function Home() {
 									data.day === currentDayOfTheWeek
 										? "bg-primary-cyan hover:bg-primary-cyan/70 peer"
 										: "bg-primary-softRed hover:bg-primary-softRed/70 peer"
-								}  rounded self-center w-10`}
+								}  rounded self-center w-8 md:w-10`}
 								style={{ height: 3 * data.amount }}
 							></div>
-							<div className="invisible p-2 text-xs rounded bg-neutral-darkBrown text-neutral-veryPaleOrange mb-2 peer-hover:visible">
+							<div className="invisible p-1 md:p-2 text-xs rounded bg-neutral-darkBrown text-neutral-veryPaleOrange mb-2 peer-hover:visible">
 								<span>${data.amount}</span>
 							</div>
 						</div>
